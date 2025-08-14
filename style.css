@@ -97,6 +97,7 @@ nav li a:hover {
     margin-top: 20px;
 }
 
+/* تنسيق بطاقات اللاعبين والأساطير والبطولات */
 .player-card, .legend-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -105,16 +106,22 @@ nav li a:hover {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    /* الخصائص الجديدة لتوحيد الحجم: */
+    flex: 1; 
+    max-width: 300px;
+    padding: 20px;
 }
 
 .player-card:hover, .legend-card:hover {
     transform: translateY(-5px);
 }
 
+/* تنسيق صور البطاقات */
 .player-card img, .legend-card img {
-    width: 100%;
+    width: 100px;
     height: auto;
     display: block;
+    margin: 0 auto 10px;
 }
 
 .player-card h3, .legend-card h3 {
@@ -130,32 +137,14 @@ nav li a:hover {
 .player-card p:last-of-type, .legend-card p:last-of-type {
     margin-bottom: 15px;
 }
-/* تنسيق الحاوية الجديدة */
+
+/* تنسيق الحاوية الجديدة للبطولات */
 .tournaments-container {
     display: flex;
-    justify-content: center; /* لتوسيط البطاقات أفقيًا */
-    gap: 20px; /* لإضافة مسافة بين البطاقات */
-    flex-wrap: wrap; /* لجعل البطاقات تنزل إلى سطر جديد على الشاشات الصغيرة */
-    margin-top: 30px; /* لإضافة مسافة من الأعلى */
-}
-
-/* تنسيق بطاقات اللاعبين والبطولات */
-.player-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* هذا يجعل البطاقات تتشارك المساحة بالتساوي وتصبح بنفس الحجم */
-    max-width: 300px; /* لتحديد أقصى عرض للبطاقة لمنعها من أن تكون كبيرة جدًا */
-}
-
-/* تعديل حجم الصور داخل البطاقات */
-.player-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 footer {
@@ -164,6 +153,4 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-
 }
-
